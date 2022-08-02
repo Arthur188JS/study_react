@@ -14,7 +14,16 @@ const calcCash = item => item.reduce((prev, curr) => prev + curr);
 
 const lesson = calcCash(cash);
 
-const makeBusiness = (director, allModule, gang, course, teacher = 'Максим') => {
+const arrData = {
+    director: 'Артем',
+    lesson,
+    command,
+    nameCourse,
+    teacher: 'Максим'
+};
+
+const makeBusiness = (data) => {
+    const {director, lesson: allModule, command: gang, nameCourse: course, teacher} = data;
     const sumTech = [...react, ...add, 'и другие'];
 
     console.log(`
@@ -27,4 +36,4 @@ const makeBusiness = (director, allModule, gang, course, teacher = 'Максим
     `);
 }
 
-makeBusiness('Артем', lesson, command, nameCourse);
+makeBusiness(arrData);
